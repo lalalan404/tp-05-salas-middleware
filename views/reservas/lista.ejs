@@ -1,0 +1,21 @@
+<header class="cabecera-pagina">
+  <div>
+    <p class="etiqueta">LISTA DE RESERVAS</p>
+    <h1><%= titulo %></h1>
+  </div>
+  <a class="boton" href="/reservas/nueva">Crear reserva</a>
+</header>
+<% if (inscripciones.length === 0) { %>
+<p>No hay ninguna reserva.</p>
+<% } else { %>
+<section class="grilla" aria-label="Productos disponibles">
+  <% inscripciones.forEach((inscripciones) => { %>
+  <article class="tarjeta">
+    <p class="precio"><%= inscripciones.sala %></p>
+    <p class="etiqueta"><%= inscripciones.fecha %></p>
+    <p class="etiqueta"><%= inscripciones.turno %></p>
+    <a href="/reservas/<%= inscripciones.id %>">Ver detalle</a>
+  </article>
+  <% }) %>
+</section>
+<% } %>
