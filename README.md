@@ -64,9 +64,8 @@ POST /reservas
 - finish (Imprime ID, método, URL, estado 302 y duración en ms)
 
 **Diagrama 2: POST /reservas Inválido**
-...
-...
 
+- igual que el flujo valido....
 - prepararAreaReserva
 - validarReserva (Fallo: detecta datos incorrectos)
 - Responde HTTP 400 y renderiza "reservas/nueva" con error
